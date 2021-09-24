@@ -1,5 +1,3 @@
-// import i18n from './config/i18n'
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -35,7 +33,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/i18n', '@sendoso/vue-i18n/modules'],
+  modules: ['@sendoso/vue-i18n/modules'],
 
   i18n: {
     defaultLocale: 'en',
@@ -52,7 +50,6 @@ export default {
       },
     ],
     prefix_except_default: true,
-    // vueI18n: i18n,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
