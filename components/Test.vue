@@ -1,19 +1,20 @@
 <template>
-  <div>{{ $test('.accountBalance') }}</div>
+  <div>
+    <div>{{ $t('common.welcome') }}</div>
+    <div>{{ $tn('common.welcome') }}</div>
+    <div>{{ $tn('.test') }}</div>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  i18nNamespace: 'components.layouts.appSidebar',
+  i18nNamespace: 'Test.nested',
   mounted() {
-    // console.log(this.$options.i18nNamespace)
-    console.log(Vue.prototype)
-    // console.log(Vue.prototype.$test)
-    // console.log(Vue.prototype.$test)
-    // console.log(this.$test)
-    console.log(this.$test('.touches'))
+    console.log(this.$t('Test.componentTest'))
+    console.log(this.$t('Test.nested.test'))
+    console.log(this.$tn('.test'))
   },
 })
 </script>

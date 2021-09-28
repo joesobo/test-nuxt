@@ -42,11 +42,11 @@ export default {
     locales: [
       {
         code: 'en',
-        file: 'en.js',
+        file: 'en/',
       },
       {
         code: 'fr',
-        file: 'fr.js',
+        file: 'fr/',
       },
     ],
     prefix_except_default: true,

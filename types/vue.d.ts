@@ -1,14 +1,13 @@
 import { NuxtApp } from '@nuxt/types/app'
-// import VueI18n from 'vue-i18n'
-import { Localize } from '@sendoso/vue-i18n/src/plugin'
+import { Localize, NamespaceLocalize } from '@sendoso/vue-i18n/src/plugin'
 
 type ExtendedNuxtApp = NuxtApp & {
-  // $t: typeof VueI18n.prototype.t
-  $test: Localize
+  $tn: NamespaceLocalize
 }
 
 declare module 'vue' {
   export default interface Vue {
-    $test: Localize
+    $t: Localize
+    $tn: NamespaceLocalize
   }
 }
