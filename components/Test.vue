@@ -2,7 +2,7 @@
   <div>
     <!-- Should result in `Hello World!` -->
     <div>{{ $t('common.welcome') }}</div>
-    <!-- Should result in `Error` -->
+    <!-- Should result in an error -->
     <div>{{ $tn('common.welcome') }}</div>
     <!-- Should result in `Another one!` -->
     <div>{{ $tn('.test') }}</div>

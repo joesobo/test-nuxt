@@ -33,10 +33,16 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@sendoso/vue-i18n'],
+  modules: ['@sendoso/nuxt-i18n'],
 
   i18n: {
     defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: require('./locales/en/'),
+      },
+    },
     langDir: 'locales/',
     lazy: true,
     locales: [
