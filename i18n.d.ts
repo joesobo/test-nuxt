@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Localize, t, tc } from '@sendoso/nuxt-i18n/dist/types'
+// This is disabled so that we can properly extend the ComponentOptions interface by ensuring we have all
+// declarations of 'ComponentOptions' with identical type parameters
+import { Localize, t, tc } from '@sendoso/nuxt-i18n/src'
 import {
   DefaultComputed,
   DefaultData,
