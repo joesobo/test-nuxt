@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // This is disabled so that we can properly extend the ComponentOptions interface by ensuring we have all
 // declarations of 'ComponentOptions' with identical type parameters
-import { Localize, t, tc } from '@sendoso/nuxt-i18n/src'
 import {
   DefaultComputed,
   DefaultData,
@@ -10,14 +9,13 @@ import {
   PropsDefinition,
 } from 'vue/types/options'
 
-declare module 'vue' {
+declare module 'vue/types/vue' {
   export default interface Vue {
-    $t: t
-    $tc: tc
-    $tn: Localize
+    $t: (key: string, values?: any) => string
   }
-
-  export interface ComponentOptions<
+}
+declare module 'vue/types/options' {
+  interface ComponentOptions<
     V extends Vue,
     Data = DefaultData<V>,
     Methods = DefaultMethods<V>,
